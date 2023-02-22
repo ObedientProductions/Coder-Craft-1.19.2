@@ -1,6 +1,7 @@
 package net.dan.codercraft.block;
 
 import net.dan.codercraft.CoderCraft;
+import net.dan.codercraft.block.custom.SiliconLampBlock;
 import net.dan.codercraft.item.ModCreativeModeTab;
 import net.dan.codercraft.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,9 +26,15 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> SILICON_ORE = registerBlock("silicon_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f)
-                    .requiresCorrectToolForDrops(), UniformInt.of(3,7)), ModCreativeModeTab.CODERCRAFT_TAB);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2, 18)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.CODERCRAFT_TAB);
+
+    public static final RegistryObject<Block> SILICON_LAMP = registerBlock("silicon_lamp",
+            () -> new SiliconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2, 18)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(SiliconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.CODERCRAFT_TAB);
 
 
 

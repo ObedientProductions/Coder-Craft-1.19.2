@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "codercraft:block/silicon_lamp/silicon_lamp_off"
+  }
+}

@@ -1,8 +1,10 @@
 {
   "item.codercraft.pcb": "PCB",
   "item.codercraft.wafer": "Wafer",
+  "item.codercraft.silicon": "Raw Silicon",
 
   "itemGroup.codercraft-tab": "Codercraft",
 
-  "block.codercraft.silicon_ore": "Silicon Ore"
+  "block.codercraft.silicon_ore": "Silicon Ore",
+  "block.codercraft.silicon_lamp": "Silicon Lamp"
 }

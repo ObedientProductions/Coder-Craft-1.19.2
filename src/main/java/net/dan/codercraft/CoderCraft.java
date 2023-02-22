@@ -3,6 +3,8 @@ package net.dan.codercraft;
 import com.mojang.logging.LogUtils;
 import net.dan.codercraft.block.ModBlocks;
 import net.dan.codercraft.item.ModItems;
+import net.dan.codercraft.world.feature.ModConfiguredFeatures;
+import net.dan.codercraft.world.feature.ModPlacedFeatures;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -29,6 +31,8 @@ public class CoderCraft
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

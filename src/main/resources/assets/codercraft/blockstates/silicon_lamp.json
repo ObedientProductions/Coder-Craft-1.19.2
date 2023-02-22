@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model":  "codercraft:block/silicon_lamp/silicon_lamp_off"},
+    "lit=true": { "model":  "codercraft:block/silicon_lamp/silicon_lamp_on"}
+  }
+}
