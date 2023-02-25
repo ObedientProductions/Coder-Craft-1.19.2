@@ -1,6 +1,7 @@
 package net.dan.codercraft.block;
 
 import net.dan.codercraft.CoderCraft;
+import net.dan.codercraft.block.custom.FabricatorBlock;
 import net.dan.codercraft.block.custom.SiliconLampBlock;
 import net.dan.codercraft.item.ModCreativeModeTab;
 import net.dan.codercraft.item.ModItems;
@@ -32,6 +33,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SILICON_LAMP = registerBlock("silicon_lamp",
             () -> new SiliconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2, 18)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(SiliconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.CODERCRAFT_TAB);
+
+    public static final RegistryObject<Block> FABRICATION_BLOCK = registerBlock("fabrication_block",
+            () -> new FabricatorBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2, 18)
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(SiliconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.CODERCRAFT_TAB);

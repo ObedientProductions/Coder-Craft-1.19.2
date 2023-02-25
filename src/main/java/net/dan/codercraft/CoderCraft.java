@@ -2,7 +2,9 @@ package net.dan.codercraft;
 
 import com.mojang.logging.LogUtils;
 import net.dan.codercraft.block.ModBlocks;
+import net.dan.codercraft.block.entity.ModBlockEntities;
 import net.dan.codercraft.item.ModItems;
+import net.dan.codercraft.screen.ModMenuTypes;
 import net.dan.codercraft.world.feature.ModConfiguredFeatures;
 import net.dan.codercraft.world.feature.ModPlacedFeatures;
 import net.minecraftforge.api.distmarker.Dist;
@@ -33,6 +35,9 @@ public class CoderCraft
 
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
